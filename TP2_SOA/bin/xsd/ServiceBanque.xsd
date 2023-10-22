@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.example.org/ServiceBanque"
+xmlns:tns="http://www.example.org/ServiceBanque"
+elementFormDefault="qualified">
+<element name="BanqueService">
+<complexType> <sequence>
+<element name="conversion" type="tns:conversion">
+</element> 
+<element name = "getCompte" type="tns:getCompte">
+</element>
+<element name = "getComptes" type="tns:getComptes" minOccurs="1" maxOccurs="unbounded">
+</element>
+</sequence>
+</complexType> 
+</element> 
+<complexType name="conversion">
+<sequence> <element name="montant" type="double">
+</element>
+</sequence> 
+</complexType>
+<complexType name="getCompte">
+<sequence>
+<element name="code" type="int">
+</element> <element name="solde" type="double">
+</element> 
+<element name="dateCreation" type="date">
+</element> 
+</sequence> 
+</complexType> 
+<complexType name="getComptes"></complexType>
+</schema>
